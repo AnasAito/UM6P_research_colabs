@@ -1,2 +1,4 @@
-# UM6P_research_colabs
-Created with CodeSandbox
+# Um6p Inter Collabs 
+
+- Um6p research collaboration with foreign countries over the years 
+
