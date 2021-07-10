@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import Globe from "./globe";
 import Header from "./header";
 export default function App() {
-  const [selected, setSelected] = useState("all years");
+  const [selected, setSelected] = useState("all");
   console.log(selected);
   return (
     <div>

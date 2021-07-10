@@ -7,6 +7,6 @@ const stats = {
   "2019": { count: 158, max_c: "france", c_afr: 24 },
   "2020": { count: 428, max_c: "france", c_afr: 46 },
   "2021": { count: 332, max_c: "france", c_afr: 39 },
-  "all years": { count: 1201, max_c: "france", c_afr: 118 }
+  all: { count: 1201, max_c: "france", c_afr: 118 }
 };
 export default stats;

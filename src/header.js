@@ -5,8 +5,8 @@ import stats_ from "./stats";
 export default function Header({ selected, setSelected }) {
   const store = stats_[selected];
   const user = {
-    name: selected,
-    role: "Um6p International research colaboration ",
+    name: selected.toUpperCase(),
+    role: "UM6P International research collaborations ",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   };

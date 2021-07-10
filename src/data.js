@@ -3305,7 +3305,7 @@ const data = {
       }
     ]
   },
-  "all years": {
+  all: {
     loc: [
       {
         name: "france",
