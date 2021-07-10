@@ -13,8 +13,8 @@ export default function Header({ selected, setSelected }) {
   };
   const stats = [
     { label: "International collaborations", value: store["count"] },
-    { label: `The major colaborator is  ${store["max_c"]}`, value: "" },
-    { label: "colaborators from african countries", value: store["c_afr"] }
+    { label: `The major collaborator is  ${store["max_c"].toUpperCase()}`, value: "" },
+    { label: "collaborators from african countries", value: store["c_afr"] }
   ];
   const executeScroll = () =>
     window.scrollTo({
