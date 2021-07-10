@@ -1,4 +1,4 @@
-export default function MenuYear({ selected, setSelected }) {
+export default function MenuYear({ executeScroll, selected, setSelected }) {
   return (
     <div class="grid  grid-cols-3 gap-2">
       {[
@@ -19,7 +19,10 @@ export default function MenuYear({ selected, setSelected }) {
               ? "bg-indigo-500 text-white"
               : "bg-indigo-100 text-indigo-800"
           } `}
-          onClick={() => setSelected(filt)}
+          onClick={() => {
+            executeScroll();
+            setSelected(filt);
+          }}
         >
           <svg
             className="-ml-1 mr-1.5 h-2 w-2 text-indigo-400"

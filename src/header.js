@@ -1,22 +1,31 @@
 /* This example requires Tailwind CSS v2.0+ */
-
+import { useRef } from "react";
 import Menu from "./menu";
 import stats_ from "./stats";
 export default function Header({ selected, setSelected }) {
   const store = stats_[selected];
+  const scroll = useRef();
   const user = {
     name: selected.toUpperCase(),
-    role: "UM6P International research collaborations",
+    role: "UM6P International research collaborations ",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   };
   const stats = [
     { label: "International collaborations", value: store["count"] },
     { label: `The major colaborator is  ${store["max_c"]}`, value: "" },
-    { label: "collaborators from African countries", value: store["c_afr"] }
+    { label: "colaborators from african countries", value: store["c_afr"] }
   ];
+  const executeScroll = () =>
+    window.scrollTo({
+      top: 120,
+      behavior: "smooth"
+    });
   return (
-    <div className="rounded-lg  z-0 bg-white overflow-hidden shadow">
+    <div
+      ref={scroll}
+      className="rounded-lg  z-0 bg-white overflow-hidden shadow"
+    >
       <h2 className="sr-only" id="profile-overview-title">
         Profile Overview
       </h2>
@@ -31,7 +40,11 @@ export default function Header({ selected, setSelected }) {
             </div>
           </div>
           <div className="mt-5  sm:mt-0  items-center ">
-            <Menu selected={selected} setSelected={setSelected} />
+            <Menu
+              executeScroll={executeScroll}
+              selected={selected}
+              setSelected={setSelected}
+            />
           </div>
         </div>
       </div>
