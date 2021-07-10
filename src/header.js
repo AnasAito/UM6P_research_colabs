@@ -6,14 +6,14 @@ export default function Header({ selected, setSelected }) {
   const store = stats_[selected];
   const user = {
     name: selected.toUpperCase(),
-    role: "UM6P International research collaborations ",
+    role: "UM6P International research collaborations",
     imageUrl:
       "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
   };
   const stats = [
     { label: "International collaborations", value: store["count"] },
     { label: `The major colaborator is  ${store["max_c"]}`, value: "" },
-    { label: "colaborators from african countries", value: store["c_afr"] }
+    { label: "collaborators from African countries", value: store["c_afr"] }
   ];
   return (
     <div className="rounded-lg  z-0 bg-white overflow-hidden shadow">
